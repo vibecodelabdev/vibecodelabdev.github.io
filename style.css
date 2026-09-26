@@ -1,0 +1,51 @@
+:root{
+  --ink:#0b1a16; --ink-2:#3c4f49; --bg:#ffffff; --bg-2:#f4f7f5;
+  --brand:#063128; --lime:#cdf02c; --line:#dfe6e2; --radius:14px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.65 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{background:var(--brand);color:#fff}
+header .wrap{display:flex;align-items:center;gap:14px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+header img{width:40px;height:40px;border-radius:9px;display:block}
+header .name{font-weight:700;font-size:18px;letter-spacing:.2px}
+header nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+header nav a{color:#cfe0d9;text-decoration:none;font-size:14px}
+header nav a:hover{color:var(--lime)}
+.hero{background:var(--brand);color:#fff;padding:44px 0 56px}
+.hero h1{margin:0 0 12px;font-size:34px;line-height:1.2}
+.hero p{margin:0;max-width:60ch;color:#d5e4de;font-size:17px}
+.tag{display:inline-block;background:var(--lime);color:var(--brand);font-weight:700;font-size:12px;letter-spacing:.6px;padding:5px 10px;border-radius:999px;margin-bottom:16px}
+main{padding:40px 0 60px}
+h2{font-size:22px;margin:36px 0 12px}
+h3{font-size:17px;margin:24px 0 8px}
+p,li{color:var(--ink-2)}
+main p:first-of-type{margin-top:0}
+ul{padding-left:20px}
+li{margin:6px 0}
+a{color:#0a6b52}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--bg-2)}
+.card h3{margin:0 0 6px;color:var(--ink)}
+.card .price{font-size:26px;font-weight:700;color:var(--brand);margin:8px 0 2px}
+.card .per{font-size:13px;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--ink);font-weight:600;white-space:nowrap;width:34%}
+td{color:var(--ink-2)}
+.note{border-left:3px solid var(--lime);background:var(--bg-2);padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0}
+footer{border-top:1px solid var(--line);padding:26px 0 44px;font-size:14px;color:var(--ink-2)}
+footer a{margin-right:14px}
+.upd{font-size:13px;color:#7b8a84;margin-top:4px}
+@media (max-width:560px){.hero h1{font-size:27px}.hero{padding:32px 0 40px}
+  th,td{padding:9px 8px}
+  th{white-space:normal;width:38%}
+  table{font-size:14px}}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#eaf1ee;--ink-2:#b3c4be;--bg:#0c1512;--bg-2:#132019;--line:#25342d}
+  a{color:#a8e06a}
+  .card .price{color:var(--lime)}
+  .card h3{color:var(--ink)}
+  th{color:var(--ink)}
+}
